@@ -1,0 +1,294 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+:root {
+    --cyan: hsl(171, 66%, 44%);
+    --light-blue: hsl(233, 100%, 69%);
+    --dark-grayish-blue: hsl(210, 10%, 33%);
+    --grayish-blue: hsl(201, 11%, 66%);
+}
+
+body {
+    font-family: 'Bai Jamjuree', sans-serif;
+    font-size: 18px;
+}
+
+ul {
+    list-style: none;
+}
+
+ul li {
+    display: block;
+}
+
+button {
+    padding: 15px 90px;
+    margin: 10px 10px;
+    color: #fff;
+}
+
+button:hover {
+    opacity: 0.8;
+}
+
+.ios {
+    background-color: var(--cyan);
+    box-shadow: 1px 1px 5px var(--dark-grayish-blue);
+    border: 0;
+    border-radius: 30px;
+}
+
+.mac {
+    background-color: var(--light-blue);
+    box-shadow: 1px 1px 5px var(--dark-grayish-blue);
+    border: 0;
+    border-radius: 30px;
+}
+
+h1,h2,h3,h4,h5,h6,p{
+    padding: 5px;
+    margin: 5px;
+}
+
+h1,h2,h3,h4,h5,h6 {
+    color: var(--dark-grayish-blue);
+    font-weight: 600;
+}
+
+p {
+    color: var(--grayish-blue);
+    font-weight: 400;
+}
+
+img {
+    width: 100%;
+}
+
+header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 70px;
+    flex-direction: column;
+    text-align: center;
+    background: url('../images/bg-header-mobile.png') no-repeat center center/cover;
+}
+
+header img {
+    width: 100px;
+    margin: 120px; 
+}
+
+section.keep-track {
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+    text-align: center;
+    margin: 50px 0;
+    padding: 70px;
+}
+
+section.computer-image {
+    display: flex;
+    flex-flow: column;
+    padding: 70px;
+    text-align: center;
+}
+
+section.access-clipboard {
+    display: flex;
+    flex-flow: column;
+    padding: 40px;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+section.supercharge {
+    text-align: center;
+    padding: 0 20px;
+}
+
+section.section-img {
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    text-align: center;
+}
+
+section.section-img img {
+    width: 50px;
+    margin: 50px;
+}
+
+
+/* Company Logos */
+section.company-logos {
+    display: flex;
+    padding: 30px;
+    align-items: center;
+    justify-content: center;
+    flex-flow: column;
+    text-align: center;
+}
+
+section.company-logos img {
+    width: 200px;
+    margin: 30px;
+}
+
+/* Clipboard */
+section.clipboard {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 70px;
+}
+
+/* Footer */
+
+footer {
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+    align-items: center;
+    justify-content: center;
+    background-color: rgb(243, 243, 243);
+    margin-top: 20px;
+}
+
+footer ul li {
+    display: block;
+    text-align: center;
+    margin: 30px 0 0;
+}
+
+footer ul a {
+    text-decoration: none;
+    color: var(--dark-grayish-blue);
+}
+
+footer ul a:hover {
+    color: var(--cyan);
+}
+
+.install {
+    visibility: hidden;
+}
+
+footer img {
+    width: 50px;
+}
+
+
+/* Social */
+.social {
+    padding: 50px;
+}
+
+.social a {
+    padding: 15px;
+    color: var(--dark-grayish-blue);
+}
+
+.social .facebook:hover {
+    color: #3b5998;
+}
+.social .twitter:hover {
+    color: #00acee;
+}
+
+.social .instagram:hover {
+    color: #87536a;
+}
+
+
+@media only screen and (min-width: 1025px){
+    /* header */
+    header {
+        background: url('../images/bg-header-desktop.png') no-repeat center center/cover;
+    }
+
+    section.computer-image {
+        flex-flow: row;
+        text-align: left;
+    }
+
+    section.computer-image .cup-img {
+        flex-grow: 1;
+        flex-shrink: 0;
+    }
+    section.computer-image img {
+        margin-left: -150px;
+        width: 960px;
+        padding-right: 40px;
+    }
+
+    section.computer-image .computer-img-content {
+        padding: 70px;
+    }
+
+    section.access-clipboard img {
+        width: 1000px;
+        margin-top: 50px;
+    }
+
+    /* Sections */
+    section.section-img {
+        flex-flow: row;
+        text-align: center;
+    }
+
+    section.section-img .section-img-items {
+        flex: 1;
+        padding: 70px;
+    }
+
+
+    /* Company Logos */
+
+    section.company-logos {
+        flex-flow: row;
+        justify-content: space-evenly;
+        margin-bottom: 50px;
+    }
+
+    /* Section clipboard */
+    section.clipboard {
+        margin-bottom: 50px;
+    }
+
+    /* Footer */
+    footer {
+        flex-direction: row;
+        justify-content: flex-start;
+    }
+
+    footer div {
+        padding-right: 200px;
+    }
+
+    footer ul li {
+        text-align: left;
+    }
+
+    .install {
+        visibility: hidden;
+    }
+
+    /* Social */
+    .social {
+        padding-left: 200px;
+    }
+    
+    .social a {
+        padding: 15px;
+        color: var(--dark-grayish-blue);
+    }
+}
+
